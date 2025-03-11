@@ -1,0 +1,89 @@
+/* General body and header styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #b4dbac; /* Header background color */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Align items on both ends (left and right) */
+    align-items: center; /* Vertically center content */
+    position: relative; /* To allow positioning the contact link */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center title and profile image */
+    flex-grow: 1; /* Take up available space */
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 48px;
+    font-family: 'Varela Round', sans-serif;
+    color: #4d2726;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Contact link styling */
+.contact-link {
+    font-size: 18px; /* Font size for the contact text */
+    font-family: 'Varela Round', sans-serif;
+    color: #4d2726; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0 20px; /* Add some padding */
+    position: absolute;
+    right: 20px; /* Position the contact link to the right */
+}
+
+.contact-link:hover {
+    text-decoration: underline; /* Underline the contact link on hover */
+}
+
+
+
+
+/* Grid layout for the gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+    gap: 10px; /* Space between images */
+    width: 90vw; /* Use 90% of the viewport width */
+    margin: 0 auto; /* Center the gallery */
+    padding: 20px;
+}
+
+/* Container for each image */
+.gallery a {
+    display: block; /* Ensure images are block-level */
+    width: 100%; /* Ensure the image container takes up the full space */
+    height: auto; /* Allow the height to adjust based on the image aspect ratio */
+    max-width: 100%; /* Ensure images don’t overflow */
+}
+
+/* Image styles within the grid */
+.gallery a img {
+    width: 100%; /* Make the image take up the full container width */
+    height: auto; /* Maintain the image's aspect ratio */
+    object-fit: cover; /* Make sure the image fits without distortion */
+    transition: transform 0.3s; /* Add smooth zoom transition */
+}
+
+/* Lightbox effect for images on hover */
+.gallery a img:hover {
+    transform: scale(1.05); /* Zoom effect when hovered */
+}
